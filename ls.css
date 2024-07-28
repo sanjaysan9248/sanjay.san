@@ -1,0 +1,410 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: #f2f2f2;
+}
+
+.slideshow-container {
+    position: relative;
+    height: 90vh; /* 80% of viewport height */
+    width: 100%;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 2s ease-in-out; /* Smooth transition */
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes fade {
+    0%, 25%, 100% { opacity: 0; }
+    10%, 20% { opacity: 1; }
+}
+
+.slide {
+    animation: fade 35s infinite; /* Total animation duration */
+}
+
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 5s; }
+.slide:nth-child(3) { animation-delay: 10s; }
+.slide:nth-child(4) { animation-delay: 15s; }
+.slide:nth-child(5) { animation-delay: 20s; }
+.slide:nth-child(6) { animation-delay: 25s; }
+.slide:nth-child(7) { animation-delay: 30s; }
+
+
+.white-line {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background-color: white;
+}
+
+#title{
+  font-size: 75px;
+  color: white;
+  position: absolute;
+  top: 0px;
+  left: 75px;
+}
+
+#title2{
+  margin-top: 45px;
+  font-size: 25px;
+  color: white;
+  position: absolute;
+  top: 20px;
+  right: 75px;
+}
+
+.content-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.left-section{
+    width: 55%;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+
+}
+
+ .right-section {
+    width: 45%;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+}
+
+#para1{
+    font-size: 45px;
+    margin-top: 40px;
+    margin-right: 0px;
+    margin-left: 50px;
+}
+
+#para2{
+    font-size: 18px;
+    margin-top: 250px;
+    margin-right: 40px;
+    margin-left: 80px;
+    font-family: Georgia;
+    word-spacing: 7px;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+.section {
+    position: relative;
+    width: 50%;
+    height: 20%;
+    overflow: hidden;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+.custom-container {
+    display: flex;
+    width: 75%; /* Adjusted to fit three sections */
+    height: 50%; /* Each section is 50% of the viewport height */
+    justify-content: space-between; /* Ensures equal spacing between sections */
+    align-items: center; /* Center vertically */
+    margin-left: 12%;
+    margin-top: 20px;
+}
+
+.custom-section {
+    position: relative;
+    width: 80%; /* Each section takes 25% of container width */
+    height: 80%; /* Each section takes 100% of container height */
+    overflow: hidden;
+    box-sizing: border-box; /* Include padding and border in width */
+    margin-left: 30px;
+}
+
+.sec-1, .sec-2, .sec-3 {
+    height: 100%; /* Each section is 50% of the container height */
+}
+
+.photo-gallery {
+    display: flex;
+    width: 100%;
+    height: 80vh; /* 80% of viewport height */
+    overflow: hidden;
+}
+
+.photo-item {
+    position: relative;
+    width: 50%; /* Each image takes up half of the container width */
+    height: 100%;
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire area without stretching */
+    margin: 0; /* Remove any default margins */
+    padding: 0; /* Remove any default padding */
+}
+
+.photo-link {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 40px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between; /* Ensures equal spacing between items */
+    width: 90%; /* Adjusted width to allow for margin space */
+    margin: 0 auto; /* Center the container */
+    height: 55vh; /* 55% of viewport height */
+    gap: 5%; /* Space between images */
+}
+
+.image-item {
+    position: relative;
+    width: calc((100% - 10%) / 3); /* Adjust width to account for the gap */
+    height: 100%;
+}
+
+.image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire area without stretching */
+    margin: 0; /* Remove any default margins */
+    padding: 0; /* Remove any default padding */
+}
+
+.image-link {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-family: Arial, sans-serif;
+}
+
+.bg1{
+    display: flex;
+    margin-top: 50px;
+    width: 100%;
+    height: 70%;
+    background-color: #f2f2f2;
+}
+
+.para3{
+    float: right;
+    word-spacing: 15px;
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 50%;
+    font-size: 20px;
+}
+
+.sd1{
+    flex: 1;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+
+.sd3{
+    padding-top: 8%;
+    padding-right: 10%;
+    font-size: 45px;
+}
+
+.instagram-section {
+    margin-top: 20px;
+    background-color: black;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.instagram-title {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.instagram-images {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Gap between images */
+}
+
+.instagram-image {
+    width: calc(16.666% - 10px); /* 100% / 6 images - gap */
+    height: 30vh; /* 30% of viewport height */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.instagram-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire space */
+}
+
+.contact-info {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between; /* Distributes items evenly with equal space between them */
+    align-items: center; /* Center align items vertically */
+    width: 80%; /* Adjust width as needed */
+    max-width: 800px; /* Limit maximum width for responsiveness */
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+}
+
+.info-item img {
+    width: 30px; /* Adjust icon size as needed */
+    height: 30px;
+    margin-right: 10px; /* Space between icon and text or next item */
+}
+
+.info-item span {
+    font-size: 16px; /* Adjust font size as needed */
+}
+
+.info-item a {
+    display: flex;
+    align-items: center;
+}
+
+.info-item a img {
+    width: 30px; /* Adjust icon size as needed */
+    height: 30px;
+    margin-right: 10px; /* Space between icon and next item */
+}
+
+#soc{
+    color: white;
+}
+
+.black{
+    height: 50%;
+    width: 100%;
+    background-color: black;
+}
+
+@media (max-width: 768px) {
+    .slideshow-container {
+        height: 40vh; /* Adjusted height for smaller screens */
+    }
+
+    .slide img {
+        object-position: center; /* Center align images */
+    }
+
+    #title {
+        font-size: 18px; /* Adjusted font size */
+        top: 5px;
+        left: 5px;
+    }
+
+    #title2 {
+        font-size: 12px; /* Adjusted font size */
+        top: -25px;
+        right: 100px;
+        text-align: right;
+    }
+
+    .left-section, .right-section {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    #para1, #para2 {
+        font-size: 12px; /* Adjusted font size */
+        text-align: justify; /* Justify text for better readability */
+        margin: 10px 0;
+    }
+
+    .photo-gallery, .image-container, .instagram-images, .contact-info {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align items */
+        padding: 10px; /* Adjusted padding */
+    }
+
+    .photo-item, .image-item, .instagram-image, .info-item {
+        width: 100%; /* Full width */
+        margin-bottom: 10px; /* Space between items */
+    }
+
+    .photo-item img, .image-item img, .instagram-image img {
+        width: 100%; /* Ensure images take full width */
+        height: auto; /* Adjusted height for variable content */
+    }
+
+    .photo-link, .image-link {
+        font-size: 10px; /* Adjusted font size */
+        bottom: 5px; /* Adjusted position */
+    }
+
+    .para3 {
+        font-size: 12px; /* Adjusted font size */
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: 5px;
+    }
+
+    .sd3 {
+        font-size: 18px; /* Adjusted font size */
+        margin-top: 5px;
+    }
+
+    .instagram-title {
+        font-size: 18px; /* Adjusted font size */
+        margin: 10
+
+
+
+
+
+
+
+
